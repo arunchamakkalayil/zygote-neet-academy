@@ -250,6 +250,7 @@ h3{
 
 .facilities-col p{
     padding: 0;
+    
 }
 .facilities-col h3{
     margin-top: 16px;
@@ -257,6 +258,7 @@ h3{
     text-align: left;
 
 }
+
 
 .testimonials{
     width: 80%;
@@ -332,8 +334,8 @@ padding: 0;
     width:80%;
     margin: auto;
     text-align: center;
-    padding: 30px 0;
-
+    padding: 15px 0;
+    
 }
 
 .footer h4{
@@ -351,7 +353,7 @@ padding: 0;
 .sub-header{
     height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/background.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/contact.jpg);
     background-position: center;
     background-size: cover;
     text-align: center;
@@ -380,7 +382,7 @@ padding: 0;
         padding-top: 0px;
     }
     .about-col p{
-        font-size: 12px;
+        font-size: 13px;
     }
 }
 
@@ -532,21 +534,17 @@ margin: 30px 0;
 .course-col h3{
     font-size: 15px;
 }
+.cta h1{
+    font-size: 16px;
 }
+.hero-btn{
+    font-size: 10px;
+}
+}
+
 @media(max-width:1135px){
     .facilities-col h3{
         font-size: 15px;
-    }
-    .facilities-col p{
-        font-size: 10px;
-    }
-    .facilities-col p{
-        line-height: 15px;
-    }
-}
-@media(max-width:750px){
-    .facilities-col h3{
-        font-size: 20px;
     }
     .facilities-col p{
         font-size: 11px;
@@ -555,10 +553,32 @@ margin: 30px 0;
         line-height: 15px;
     }
 }
+
 @media(max-width:847px){
 
     .facilities-col h3{
-        font-size: 13px;
+        font-size: 11px;
     }
 
+}
+
+@media(max-width:750px){
+
+    .facilities-col h3{
+        font-size: 15px;
+    }
+
+}
+@media (min-width:750px) and (max-width:1000px){
+    .course-col h3{
+        font-size: 13px;
+
+    }
+    .course-col p{
+        font-size: 13px;
+    }
+}
+.footer-image{
+    margin: auto;
+    height: 50px;
 }
