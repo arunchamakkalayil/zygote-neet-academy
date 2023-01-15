@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap"
       rel="stylesheet"
     />
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
 
@@ -74,7 +75,7 @@
         </div>
         <div class="contact-col">
             
-            <form id="submit-form" action="">
+            <form id="submit-form"  action="">
                 <input type="text" autocomplete="off" name="name" placeholder="Enter your name" required>
                 <input type="email" autocomplete="off" name="email" placeholder="Enter your email" required>
                 <input type="text" autocomplete="off"  name="subject" placeholder="Enter your subject" required>
@@ -111,7 +112,7 @@
       $("#submit-form").submit((e)=>{
           e.preventDefault()
           $.ajax({
-              url:"https://script.google.com/macros/s/AKfycbxM-YfHnC7usHsA4mbEv1hzLmHvmXuSPwy6gqXda6e5I3I_aA0tPJhR4VEhgY0rQ9k/exec",
+              url:"https://script.google.com/macros/s/AKfycbxHyTmqvnlnTvx_BLiYXEBy-SFo1aZDNNRdeihg37NDC-NF2ohCr2f2bTVuk8J8b8Aj/exec",
               data:$("#submit-form").serialize(),
               method:"post",
               success:function (response){
