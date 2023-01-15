@@ -45,14 +45,12 @@
       <h1>Contact Us</h1>
     </section>
 
-    <div class="upload">
+    <div>
       <img id="myimg">
-      Upload Files<br />
-      <label>Image Name</label><input type="text" id="namebox" /><label id="exitlab"></label><br><br>
-      <label><img style="height: 200px;width:200px;border:2px black solid" id="myimg"><label id="upprogress"></label><br><br>
-      <button id="selbtn">Upload</button>
-      <button id="upbtn">Upload</button>
-      <button id="downbtn">Upload</button>
+      <form action="/">
+        <input type="file" id="myFile" name="filename">
+        <input type="submit">
+      </form>
       </div>
 
     <section class="footer">
@@ -80,63 +78,29 @@
         navLinks.style.right = "-200px";
       }
     </script>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
-  import { getStorage ,ref, getDownloadURL} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+    <script>
+import firebase from "firebase/app";
+import "firebase/storage";
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyDb8Gn4BMFhfmNZmNMLYqk6uR5qdIyMYHM",
-    authDomain: "zygote-f365d.firebaseapp.com",
-    projectId: "zygote-f365d",
-    storageBucket: "zygote-f365d.appspot.com",
-    messagingSenderId: "605781268181",
-    appId: "1:605781268181:web:3ef0f905b1c182efc4345c"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  
-  
- // Get a reference to the storage service, which is used to create references in your storage bucket
-const storage = getStorage();
-
-// Create a storage reference from our storage service
-//const storageRef = ref(storage);
-//const pathReference = ref(storage, 'IMG-20230114-WA0004.jpg');
-//const gsReference = ref(storage, 'gs://bucket/images/IMG-20230114-WA0004.jpg');
-//const httpsReference = ref(storage, 'https://firebasestorage.googleapis.com/v0/b/zygote-f365d.appspot.com/o'); 
-//console.log(httpsReference)
+// TODO: Replace the following with your app's Firebase project configuration
+// See: https://firebase.google.com/docs/web/learn-more#config-object
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDb8Gn4BMFhfmNZmNMLYqk6uR5qdIyMYHM",
+  authDomain: "zygote-f365d.firebaseapp.com",
+  projectId: "zygote-f365d",
+  storageBucket: "zygote-f365d.appspot.com",
+  messagingSenderId: "605781268181",
+  appId: "1:605781268181:web:3ef0f905b1c182efc4345c"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
 
-getDownloadURL(ref(storage,'IMG-20230114-WA0004.jpg'))
-  .then((url) => {
-    // `url` is the download URL for 'images/stars.jpg'
-console.log(url);
-    // This can be downloaded directly:
-    const xhr = new XMLHttpRequest();
-    xhr.responseType = 'blob';
-    xhr.onload = (event) => {
-      const blob = xhr.response;
-    };
-    xhr.open('GET', url);
-    xhr.send();
-
-    // Or inserted into an <img> element
-    const img = document.getElementById('myimg');
-    img.setAttribute('src', url);
-  })
-  .catch((error) => {
-    // Handle any errors
-  });;
-
-
+// Initialize Cloud Storage and get a reference to the service
+const storage = firebase.storage();
 
 </script>
-
   
 
   </body>
