@@ -42,16 +42,12 @@
         <i class="fa-solid fa-bars" onclick="showMenu()"></i>
       </nav>
 
-      <h1>Contact Us</h1>
+      <h1>Gallery</h1>
     </section>
 
-    <div>
-      <img id="myimg">
-      <form action="/">
-        <input type="file" id="myFile" name="filename">
-        <input type="submit">
-      </form>
-      </div>
+    <section class="gallery">
+      
+    </section>
 
     <section class="footer">
       <h4>About Us</h4>
@@ -78,29 +74,7 @@
         navLinks.style.right = "-200px";
       }
     </script>
-    <script>
-import firebase from "firebase/app";
-import "firebase/storage";
-
-// TODO: Replace the following with your app's Firebase project configuration
-// See: https://firebase.google.com/docs/web/learn-more#config-object
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyDb8Gn4BMFhfmNZmNMLYqk6uR5qdIyMYHM",
-  authDomain: "zygote-f365d.firebaseapp.com",
-  projectId: "zygote-f365d",
-  storageBucket: "zygote-f365d.appspot.com",
-  messagingSenderId: "605781268181",
-  appId: "1:605781268181:web:3ef0f905b1c182efc4345c"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-
-
-// Initialize Cloud Storage and get a reference to the service
-const storage = firebase.storage();
-
-</script>
+   
   
 
   </body>
