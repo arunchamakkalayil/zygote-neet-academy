@@ -105,7 +105,7 @@ nav .fa-solid{
 
 @media(max-width:750px){
     .text-box h1{
-        font-size: 20px;
+        font-size: 25px;
     }
     .nav-links ul li{
         display: block;
@@ -114,7 +114,7 @@ nav .fa-solid{
     .nav-links{
         position: fixed;
         background: #f44336;
-        height: 65vh;
+        height: 100vh;
         width: 200px;
         top:0;
         right: -200px;
@@ -142,7 +142,9 @@ nav .fa-solid{
     }
 
 }
-
+.text-box h2{
+    color: #ffffff;
+}
 
 .course{
     width: 80%;
@@ -612,4 +614,22 @@ margin: 30px 0;
     .gallery{
         columns: 1;
     }
+}
+.course-col{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly ;
+}
+.course-col h4{
+    font-size: 13px;
+}
+.course-col .hero-btn{
+    border: 1px solid #f44336;
+    color: #f44336;
+    font-size: 10px;
+    padding: 10px 28px;
+ 
+}
+.course-col .hero-btn:hover{
+    color: white;
 }
